@@ -25,4 +25,12 @@ class Owner
 		@@all = []
 	end
 
+	 def cats
+        # self => user instance
+        Cat.all.select do |cat|
+            cat.owner == self
+        end
+    end
+
 end
+
